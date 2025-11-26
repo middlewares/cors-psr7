@@ -36,9 +36,6 @@ jobs:
         strategy:
             matrix:
                 php:
-                    - 7.2
-                    - 7.3
-                    - 7.4
                     - 8.0
                     - 8.1
                     - 8.2
@@ -66,7 +63,6 @@ jobs:
 
             - name: Tests
               run: composer test
-
 
             - if: "matrix.php == 8.1"
               name: Upload code coverage
